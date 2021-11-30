@@ -41,3 +41,16 @@
   text-decoration: none;
   color: #333333;
 }
+
+footer {
+  width: 100vw;
+  height: 50px;
+  margin: 30px auto;
+  padding: 10px;
+  color: gray;
+  background-color: bisque;
+}
+
+footer p {
+  text-align: center;
+}
