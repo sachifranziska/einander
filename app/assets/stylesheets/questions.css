@@ -12,12 +12,43 @@
 .side-bar-header {
   height: 100px;
   padding: 0 20px;
+  background-color: #f0bf97;
+  display: flex;
+  align-items: center;
+}
+
+.logo .einander-icon {
+  font-size: 30px;
+  color: #FAFAFA;
+  text-decoration: none;
 }
 
 .post-content {
   background-color: bisque;
   height: calc(100vh - 100px);
   padding: 0 20px;
+}
+
+.select-post-contents {
+  padding: 20px 0 20px;
+}
+
+.post-title {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ask {
+  text-decoration: none;
+}
+
+.advise {
+  text-decoration: none;
+}
+
+.share {
+  text-decoration: none;
 }
 
 /* メイン部分 */
