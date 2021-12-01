@@ -1,0 +1,142 @@
+.wrapper {
+  display: flex;
+}
+
+/* サイドバー */
+.side-bar {
+  background-color: #f0bf97;
+  width: 250px;
+  height: 100vh;
+}
+
+.side-bar-header {
+  height: 100px;
+  padding: 0 20px;
+  background-color: #f0bf97;
+  display: flex;
+  align-items: center;
+}
+
+.logo .einander-icon {
+  font-size: 30px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.post-content {
+  background-color: bisque;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+}
+
+.select-post-contents {
+  padding: 20px 0 20px;
+}
+
+.post-title {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.post-detail {
+  border: 1px solid #f0bf97;
+  margin: 15px;
+}
+
+.ask {
+  text-decoration: none;
+}
+
+.advise {
+  text-decoration: none;
+}
+
+.share {
+  text-decoration: none;
+}
+
+/* メイン部分 */
+.main-content {
+  background-color: #FFFFFF;
+  width: calc(100vw - 250px);
+  height: 100vh;
+}
+
+.main-header {
+  height: 100px;
+  padding: 0 40px;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-header {
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.login {
+  text-decoration: none;
+  margin-right: 20px;
+  color: #333333;
+  border: 1px solid #f0bf97;
+  padding: 10px;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+  border: 1px solid #f0bf97;
+  padding: 10px;
+}
+
+.contents {
+  background-color: #f7f0eb;
+  height: calc(100vh - 100px - 60px);
+  padding: 20px 40px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  background-color: #FFF;
+}
+
+.ask-content .subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  font-weight: bold;
+  border-bottom: 1px solid #f0bf97;
+}
+
+.ask-info {
+  width: 100vw;
+  display: flex;
+}
+
+.ask-detail {
+  width: 30vh;
+  padding: 1vw;
+}
+
+.main-footer {
+  background-color: #f0bf97;
+  height: 60px;
+  padding: 20px 40px;
+}
+
+.copyright {
+  font-size: 2vh;
+  color: #FAFAFA;
+}
