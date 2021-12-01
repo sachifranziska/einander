@@ -39,6 +39,11 @@
   margin-bottom: 20px;
 }
 
+.post-detail {
+  border: 1px solid #f0bf97;
+  margin: 15px;
+}
+
 .ask {
   text-decoration: none;
 }
@@ -60,14 +65,69 @@
 
 .main-header {
   height: 100px;
-  background-color: bisque;
   padding: 0 40px;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-header {
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.login {
+  text-decoration: none;
+  margin-right: 20px;
+  color: #333333;
+  border: 1px solid #f0bf97;
+  padding: 10px;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+  border: 1px solid #f0bf97;
+  padding: 10px;
 }
 
 .contents {
-  background-color: #FAFAFA;
+  background-color: #f7f0eb;
   height: calc(100vh - 100px - 90px);
-  padding: 0 40px;
+  padding: 20px 40px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  background-color: #FFF;
+}
+
+.ask-content .subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  font-weight: bold;
+  border-bottom: 1px solid #f0bf97;
+}
+
+.ask-info {
+  width: 100vw;
+  display: flex;
+}
+
+.ask-detail {
+  width: 30vh;
+  padding: 1vw;
 }
 
 .main-footer {
