@@ -47,6 +47,12 @@
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
+      <label class="form-text">性別</label>
+    </div>
+    <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"gender-select"}) %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
       <label class="form-text">生年月日</label>
       <span class="indispensable">必須</span>
     </div>
@@ -72,34 +78,27 @@
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
+      <label class="form-text">お住まいの国</label>
+    </div>
+    <%= f.collection_select(:country_id, Country.all, :id, :name, {}, {class:"country-select"}) %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
       <label class="form-text">お住まいの都市</label>
     </div>
     <%= f.text_area :city, class:"input-default", id:"city", placeholder:"例) furima太郎", maxlength:"40" %>
   </div>
-
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">性別</label>
+      <label class="form-text">ドイツでの経験</label>
     </div>
-    <%= f.text_area :city, class:"input-default", id:"city", placeholder:"例) furima太郎", maxlength:"40" %>
+    <%= f.collection_select(:experience_id, Experience.all, :id, :name, {}, {class:"experience-select"}) %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">お住まいの国</label>
+      <label class="form-text">ドイツ滞在期間</label>
     </div>
-    <%= f.text_area :city, class:"input-default", id:"city", placeholder:"例) furima太郎", maxlength:"40" %>
-  </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">経験</label>
-    </div>
-    <%= f.text_area :city, class:"input-default", id:"city", placeholder:"例) furima太郎", maxlength:"40" %>
-  </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">滞在期間</label>
-    </div>
-    <%= f.text_area :city, class:"input-default", id:"city", placeholder:"例) furima太郎", maxlength:"40" %>
+    <%= f.collection_select(:stay_length_id, StayLength.all, :id, :name, {}, {class:"stay-length-select"}) %>
   </div>
   <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
