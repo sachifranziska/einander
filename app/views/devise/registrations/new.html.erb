@@ -1,0 +1,101 @@
+<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+<div class='form-wrap'>
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      Sign up
+    </h1>
+  </div>
+  <%= devise_error_messages!%>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label for="nickname"></label>
+      <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"アカウント名", maxlength:"40" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label for="email"></label>
+      <%= f.email_field :email, class:"input-default", id:"email", placeholder:"メールアドレス", autofocus: true %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label for="password"></label>
+      <%= f.password_field :password, class:"input-default", id:"password", placeholder:"パスワード" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label for="password_confirmation"></label>
+      <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"パスワード確認" %>
+    </div> 
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label for="last_name"></label>
+      <%= f.text_area :last_name, class:"input-name", id:"last-name", placeholder:"名字" %>
+    </div>
+    <div class='form-text-wrap'>
+      <label for="first_name"></label>
+      <%= f.text_area :first_name, class:"input-name", id:"first-name", placeholder:"名前" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">性別</label>
+      <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"gender-select"}) %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">生年月日</label>
+    </div>
+    <div class='input-birth-wrap'>
+      <%= raw sprintf(
+                  f.date_select(
+                    :birth_date,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1930,
+                    end_year: (Time.now.year - 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label for="job"></label>
+      <%= f.text_area :job, class:"input-default", id:"job", placeholder:"職業", maxlength:"40" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">お住まいの国</label>
+      <%= f.collection_select(:country_id, Country.all, :id, :name, {}, {class:"country-select"}) %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label for="city"></label>
+      <%= f.text_area :city, class:"input-default", id:"city", placeholder:"お住まいの都市", maxlength:"40" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ドイツでの経験</label>
+      <%= f.collection_select(:experience_id, Experience.all, :id, :name, {}, {class:"experience-select"}) %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ドイツ滞在期間</label>
+      <%= f.collection_select(:stay_length_id, StayLength.all, :id, :name, {}, {class:"stay-length-select"}) %>
+    </div>
+  </div>
+  <div class='sign-btn'>
+    <%= f.submit "Sign up" ,class:"sign-panel-btn" %>
+  </div>
+</div>
+<% end %>
