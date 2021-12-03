@@ -13,8 +13,8 @@
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label for="category"></label>
-      <%= f.text_field :category, class:"input-default", id:"category", placeholder:"" %>
+      <label class="form-text">Category</label>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
     </div>
   </div>
   <div class="form-group">
