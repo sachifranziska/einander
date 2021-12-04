@@ -13,15 +13,32 @@
 </div>
 
 <div class="contents">
+
   <div class="content">
     <div class="ask-content">
       <div class="subtitle">
         新規相談リスト
       </div>
     </div>
-    <%= render partial: 'question', collection: @questions %>
-  </div>  
-</div>
+    <div class="ask-info">
+      <%= render partial: 'question', collection: @questions %>
+    </div>
+  </div>
+
+  <%# 仮置き %>
+  <div class="content">
+    <div class="ask-content">
+      <div class="subtitle">
+        新規相談リスト
+      </div>
+    </div>
+    <div class="ask-info">
+      <%= render partial: 'question', collection: @questions %>
+    </div>
+  </div>
+  <%# /仮置き %>
+
+</div>  
 
 <div class="main-footer">
   <p class="copyright">
