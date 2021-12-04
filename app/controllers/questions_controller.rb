@@ -2,6 +2,7 @@ class QuestionsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
+    @questions = Question.includes(:user).order('created_at DESC')
   end
 
   def new

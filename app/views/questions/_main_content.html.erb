@@ -19,31 +19,8 @@
         新規相談リスト
       </div>
     </div>
-    <div class="ask-info">
-      <div class="ask-detail">
-        <div class="ask-title">
-          タイトル
-        </div>
-        <div class="ask-category">
-          カテゴリー
-        </div>
-        <div class="ask-user">
-          ユーザー名
-        </div>
-      </div>
-      <div class="ask-detail">
-        <div class="ask-title">
-          タイトル
-        </div>
-        <div class="ask-category">
-          カテゴリー
-        </div>
-        <div class="ask-user">
-          ユーザー名
-        </div>
-      </div>
-    </div>
-  </div>
+    <%= render partial: 'question', collection: @questions %>
+  </div>  
 </div>
 
 <div class="main-footer">
