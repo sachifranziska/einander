@@ -4,7 +4,6 @@
 
 /* サイドバー */
 .side-bar {
-  background-color: #f0bf97;
   width: 250px;
   height: 100vh;
 }
@@ -12,7 +11,6 @@
 .side-bar-header {
   height: 100px;
   padding: 0 20px;
-  background-color: #f0bf97;
   display: flex;
   align-items: center;
   position: relative;
@@ -27,7 +25,7 @@
 }
 
 .post-content {
-  background-color: bisque;
+  background-color: #CD9CC8;
   height: calc(100vh - 100px - 60px);
   padding: 0 20px;
   overflow: scroll;
@@ -48,7 +46,7 @@
 }
 
 .side-footer {
-  background-color: #f0bf97;
+  background-color: #E0CFBB;
   height: 60px;
 }
 
@@ -62,7 +60,7 @@
 .main-header {
   height: 100px;
   padding: 0 40px;
-  background-color: bisque;
+  background-color: #A6C8C8;
   display: flex;
   flex-direction: column;
 }
@@ -101,9 +99,9 @@
   height: calc(100vh - 100px - 60px);
   padding: 20px 40px;
   overflow: scroll;
-  background-image: image-url('background_image.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("/images/background_image.png");
+  background-size: contain;
+  background-repeat: repeat;
   background-position: top center;
 }
 
@@ -134,7 +132,7 @@
 }
 
 .main-footer {
-  background-color: #f0bf97;
+  background-color: #E0CFBB;
   height: 60px;
   padding: 20px 40px;
   display: flex;
