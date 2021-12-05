@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
+  before_action :set_question, only: [:show, :edit, :update]
 
   def index
     @questions = Question.includes(:user).order('created_at DESC')
@@ -19,15 +20,12 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @question = Question.find(params[:id])
   end
 
   def edit
-    @question = Question.find(params[:id])
   end
 
   def update
-    @question = Question.find(params[:id])
     if @question.update(question_params)
       redirect_to question_path(@question.id)
     else
@@ -45,6 +43,10 @@ class QuestionsController < ApplicationController
 
   def question_params
     params.require(:question).permit(:title, :category_id, :content).merge(user_id: current_user.id)
+  end
+
+  def set_question
+    @question = Question.find(params[:id])
   end
 
 end
