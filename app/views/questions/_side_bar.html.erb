@@ -1,7 +1,5 @@
 <div class="side-bar-header">
-  <div class="logo">
-    <%= link_to 'einander', root_path, class: "einander-icon" %>
-  </div>
+  <%= link_to image_tag("einander_logo.png", class:"einander-icon"), root_path %>
 </div>
 
 <div class="post-content">
@@ -10,9 +8,12 @@
       何を投稿しますか?
     </p>
     <ul class="post-lists">
-      <li class="post-detail"><%= link_to '相談する', new_question_path, class: "ask" %></li>
-      <li class="post-detail"><%= link_to 'アドバイスする', root_path, class: "advise" %></li>
-      <li class="post-detail"><%= link_to '情報をシェアする', root_path, class: "share" %></li>
+      <li class="post-detail"><%= link_to image_tag("question_icon.png", size: '150x60', class:"question-icon"), new_question_path %></li>
+      <li class="post-detail"><%= link_to image_tag("advise_icon.png", size: '150x60', class:"advise-icon"), root_path %></li>
+      <li class="post-detail"><%= link_to image_tag("share_icon.png", size: '150x60', class:"share-icon"), root_path %></li>
     </ul>
   </div>
+</div>
+
+<div class="side-footer">
 </div>
