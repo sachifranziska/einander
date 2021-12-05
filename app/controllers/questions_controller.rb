@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   before_action :set_question, only: [:show, :edit, :update]
+  before_action :move_to_index, only: [:edit, :destroy]
 
   def index
     @questions = Question.includes(:user).order('created_at DESC')
@@ -49,4 +50,8 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
   end
 
+  def move_to_index
+    question = Question.find(params[:id])
+    redirect_to action: :index unless current_user.id == question.user_id
+  end
 end
