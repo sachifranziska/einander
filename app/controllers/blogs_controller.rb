@@ -1,6 +1,5 @@
 class BlogsController < ApplicationController
-  
-  def
+  def new
     @blog = Blog.new
   end
 end
