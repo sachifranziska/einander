@@ -4,7 +4,6 @@
 
 /* サイドバー */
 .side-bar {
-  background-color: #f0bf97;
   width: 250px;
   height: 100vh;
 }
@@ -12,21 +11,24 @@
 .side-bar-header {
   height: 100px;
   padding: 0 20px;
-  background-color: #f0bf97;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
-.logo .einander-icon {
-  font-size: 30px;
-  color: #FAFAFA;
-  text-decoration: none;
+.einander-icon {
+  width: 10vw;
+  margin-right: 10vw;
+  position: absolute;
+  top: 18px;
+  left: 60px;
 }
 
 .post-content {
-  background-color: bisque;
-  height: calc(100vh - 100px);
+  background-color: #CD9CC8;
+  height: calc(100vh - 100px - 60px);
   padding: 0 20px;
+  overflow: scroll;
 }
 
 .select-post-contents {
@@ -40,20 +42,12 @@
 }
 
 .post-detail {
-  border: 1px solid #f0bf97;
   margin: 15px;
 }
 
-.ask {
-  text-decoration: none;
-}
-
-.advise {
-  text-decoration: none;
-}
-
-.share {
-  text-decoration: none;
+.side-footer {
+  background-color: #E0CFBB;
+  height: 60px;
 }
 
 /* メイン部分 */
@@ -66,7 +60,7 @@
 .main-header {
   height: 100px;
   padding: 0 40px;
-  background-color: bisque;
+  background-color: #A6C8C8;
   display: flex;
   flex-direction: column;
 }
@@ -101,23 +95,28 @@
 }
 
 .contents {
-  background-color: #f7f0eb;
+  /* background-color: #f7f0eb; */
   height: calc(100vh - 100px - 60px);
   padding: 20px 40px;
+  overflow: scroll;
+  background-image: url("/images/background_image.png");
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: top center;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
-  background-color: #FFF;
+  padding: 15px 0;
+  margin-bottom: 30px;
 }
 
 .ask-content .subtitle {
   font-size: 3vh;
-  margin: 1vh 0;
+  margin: 1vh 0 3vh;
   font-weight: bold;
-  border-bottom: 1px solid #f0bf97;
+  border-bottom: 2px solid #f0bf97;
 }
 
 .ask-info {
@@ -128,12 +127,16 @@
 .ask-detail {
   width: 30vh;
   padding: 1vw;
+  margin-right: 20px;
+  border: 1px solid #f0bf97;
 }
 
 .main-footer {
-  background-color: #f0bf97;
+  background-color: #E0CFBB;
   height: 60px;
   padding: 20px 40px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .copyright {

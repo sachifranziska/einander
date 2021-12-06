@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :questions
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :country
   belongs_to :experience

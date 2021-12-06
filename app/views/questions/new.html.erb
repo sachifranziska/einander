@@ -1,0 +1,30 @@
+<%= form_with(model: @question, local: true) do |f| %>
+<div class='form-wrap'>
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      相談する
+    </h1>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label for="title"></label>
+      <%= f.text_field :title, class:"input-default", id:"title", placeholder:"Title" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">Category</label>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label for="content"></label>
+      <%= f.text_area :content, class:"input-default", id:"content", placeholder:"Text" %>
+    </div>
+  </div>
+  <div class='sign-btn'>
+    <%= f.submit "Send" ,class:"sign-panel-btn" %>
+  </div>
+</div>
+<% end %>

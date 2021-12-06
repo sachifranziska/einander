@@ -1,0 +1,15 @@
+<div class="ask-detail">
+  <div class="ask-title">
+    <%= link_to question.title, question_path(question.id) %>
+  </div>
+  <div class="ask-category">
+    <%= question.category.name %>
+  </div>
+  <div class="ask-user">
+    <%= question.user.nickname %>
+  </div>
+  <div class="ask-date">
+    <%= l question.created_at %>
+  </div>
+</div>
+
