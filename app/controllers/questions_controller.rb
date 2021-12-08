@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
 
   def index
     @questions = Question.includes(:user).order('created_at DESC')
+    @blogs = Blog.includes(:user).order('created_at DESC')
   end
 
   def new
