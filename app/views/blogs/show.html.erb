@@ -1,0 +1,15 @@
+<div class="ask-detail">
+  <div class="ask-title">
+    <%= @blog.title %>
+  </div>
+  <div class="ask-category">
+    <%= @blog.category.name %>
+  </div>
+  <div class="ask-user">
+    <%= @blog.user.nickname %>
+  </div>
+  <div class="ask-date">
+    <%= l @blog.created_at %>
+  </div>
+  <%= image_tag @blog.image.variant(resize: '150x150'), class: 'blog-image' if @blog.image.attached? %>
+</div>
