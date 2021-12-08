@@ -13,3 +13,8 @@
   </div>
   <%= image_tag @blog.image.variant(resize: '150x150'), class: 'blog-image' if @blog.image.attached? %>
 </div>
+
+<% if user_signed_in? && current_user.id == @blog.user_id %>
+  <%= link_to "編集する", edit_blog_path(@blog.id), method: :get, class: "blog-btn" %>
+  <%= link_to "削除する", blog_path(@blog.id), method: :delete, class:"blog-destroy" %>
+<% end %>
