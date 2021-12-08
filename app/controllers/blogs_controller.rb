@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
-  def index
-  end
+  before_action :authenticate_user!, except: [:show]
+  before_action :set_blog, only: [:show, :edit, :update]
+  before_action :move_to_index, only: [:edit, :destroy]
 
   def new
     @blog = Blog.new
@@ -16,15 +17,12 @@ class BlogsController < ApplicationController
   end
 
   def show
-    @blog = Blog.find(params[:id])
   end
 
   def edit
-    @blog = Blog.find(params[:id])
   end
 
   def update
-    @blog = Blog.find(params[:id])
     if @blog.update(blog_params)
       redirect_to blog_path(@blog.id)
     else
@@ -42,5 +40,14 @@ class BlogsController < ApplicationController
 
   def blog_params
     params.require(:blog).permit(:title, :category_id, :content, :image).merge(user_id: current_user.id)
+  end
+
+  def set_blog
+    @blog = Blog.find(params[:id])
+  end
+
+  def move_to_index
+    blog = Blog.find(params[:id])
+    redirect_to root_path unless current_user.id == blog.user_id
   end
 end
