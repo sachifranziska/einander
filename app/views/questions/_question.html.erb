@@ -1,9 +1,12 @@
 <div class="ask-detail">
   <div class="ask-title">
-    <%= link_to question.title, question_path(question.id) %>
+    <%= link_to question.title, question_path(question.id), class: "title-link" %>
   </div>
   <div class="ask-category">
     <%= question.category.name %>
+  </div>
+  <div class="ask-content">
+    <%= question.content.truncate(40) %>
   </div>
   <div class="ask-user">
     <%= question.user.nickname %>

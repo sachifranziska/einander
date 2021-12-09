@@ -26,29 +26,51 @@
 
 .post-content {
   background-color: #CD9CC8;
-  height: calc(100vh - 100px - 60px);
+  height: calc(100vh - 100px - 50px);
   padding: 0 20px;
   overflow: scroll;
 }
 
 .select-post-contents {
   padding: 20px 0 20px;
+  margin-top: 15px;
 }
 
-.post-title {
-  font-size: 15px;
-  font-weight: bold;
-  margin-bottom: 20px;
+.post-lists {
+  display: flex;
+  flex-direction: column;
 }
 
 .post-detail {
-  margin: 15px;
+margin: 8px;
+}
+
+.question-icon {
+  margin-left: 25px;
+}
+
+.advise-icon {
+  margin-left: 13px;
+}
+
+.share-icon {
+  margin-left: 15px;
+  margin-top: 3px;
 }
 
 .side-footer {
   background-color: #E0CFBB;
-  height: 60px;
+  height: 50px;
+  display: flex;
+  align-items: center;
 }
+
+.copyright {
+  font-size: 2.3vh;
+  color: #FAFAFA;
+  margin-left: 4.5vh;
+}
+
 
 /* メイン部分 */
 .main-content {
@@ -76,27 +98,39 @@
   display: flex;
   list-style: none;
   justify-content: space-between;
-  align-items: flex-end;
 }
 
 .login {
   text-decoration: none;
   margin-right: 20px;
   color: #333333;
-  border: 1px solid #f0bf97;
+  border: 1px solid;
   padding: 10px;
 }
 
 .sign-up {
   text-decoration: none;
   color: #333333;
-  border: 1px solid #f0bf97;
+  border: 1px solid;
+  padding: 10px;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 20px;
+  color: #333333;
+  padding: 10px;
+}
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+  border: 1px solid;
   padding: 10px;
 }
 
 .contents {
-  /* background-color: #f7f0eb; */
-  height: calc(100vh - 100px - 60px);
+  height: calc(100vh - 100px);
   padding: 20px 40px;
   overflow: scroll;
   background-image: url("/images/background_image.png");
@@ -109,14 +143,17 @@
   display: flex;
   flex-direction: column;
   padding: 15px 0;
-  margin-bottom: 30px;
+}
+
+.explain-title {
+  font-size: 4vh;
 }
 
 .ask-content .subtitle {
   font-size: 3vh;
   margin: 1vh 0 3vh;
   font-weight: bold;
-  border-bottom: 2px solid #f0bf97;
+  border-bottom: 2px solid #CD9CC8;
 }
 
 .ask-info {
@@ -125,21 +162,36 @@
 }
 
 .ask-detail {
-  width: 30vh;
+  width: 45vh;
   padding: 1vw;
   margin-right: 20px;
-  border: 1px solid #f0bf97;
+  border: 2px solid #CD9CC8;
 }
 
-.main-footer {
-  background-color: #E0CFBB;
-  height: 60px;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: flex-end;
+.ask-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 
-.copyright {
+.title-link {
+  text-decoration: none;
+}
+
+.ask-category {
+  color: #7c7979;
+}
+
+.ask-content {
+  padding: 5px 0;
+}
+
+.ask-date {
   font-size: 2vh;
-  color: #FAFAFA;
+  color: #7c7979;
+}
+
+.blog-image {
+  margin-top: 5px;
+  margin-bottom: 2px;
 }
