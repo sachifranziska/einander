@@ -5,13 +5,16 @@
   <div class="ask-category">
     <%= @blog.category.name %>
   </div>
+  <%= image_tag @blog.image.variant(resize: '250x250'), class: 'blog-image' if @blog.image.attached? %>
+  <div class="ask-content">
+    <%= @blog.content %>
+  </div>
   <div class="ask-user">
     <%= @blog.user.nickname %>
   </div>
   <div class="ask-date">
     <%= l @blog.created_at %>
   </div>
-  <%= image_tag @blog.image.variant(resize: '150x150'), class: 'blog-image' if @blog.image.attached? %>
 </div>
 
 <% if user_signed_in? && current_user.id == @blog.user_id %>
