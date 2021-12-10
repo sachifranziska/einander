@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="form-group">
-      <div class='form-text-wrap'>
+      <div class='category-wrap'>
         <label class="form-text">Category</label>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
       </div>
@@ -20,14 +20,14 @@
     <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-image">
-          <%= f.file_field :image, id:"form-image" %>
+          <%= f.file_field :image, class:"image-default", id:"form-image" %>
         </label>
       </div>
     </div>
     <div class="form-group">
       <div class='form-text-wrap'>
         <label for="content"></label>
-        <%= f.text_area :content, class:"input-default", id:"content", placeholder:"Text" %>
+        <%= f.text_area :content, class:"input-text", id:"content", placeholder:"Text" %>
       </div>
     </div>
     <div class='sign-btn'>
