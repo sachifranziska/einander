@@ -6,14 +6,15 @@
   background: #fafafa;
   margin: 3em auto;
   padding: 0 1em;
-  max-width: 370px;
+  max-width: 400px;
 }
 
 .form-header-text {
   text-align: center;
   padding: 1em 0;
   font-size: 4vh;
-  color: #e08d48;
+  color: #A6C8C8;
+  text-shadow: 0 0 1px rgba(15, 23, 36, 0.966);
 }
 
 .form-group {
@@ -21,8 +22,16 @@
 }
 
 .form-text-wrap {
-  margin-bottom: 0.75em;
   width: 100%;
+}
+
+.category-wrap {
+  padding: 2vh 0; 
+  margin: 2vh 0;
+}
+
+.image-default {
+  margin-bottom: 25px;
 }
 
 .input-default {
@@ -32,6 +41,22 @@
   color: #666;
   font-size: 1em;
   height: 50px;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+
+.form-text {
+  color: #666;
+  margin-right: 2vh;
+}
+
+.input-text {
+  background: #fafafa;
+  border: none;
+  border-bottom: 2px solid #e9e9e9;
+  color: #666;
+  font-size: 1em;
+  height: 250px;
   transition: border-color 0.3s;
   width: 100%;
 }
@@ -75,7 +100,7 @@
 }
 
 .sign-panel-btn {
-  background: #f0bf97;
+  background: #A6C8C8;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -89,11 +114,28 @@
 }
 
 .sign-panel-btn:hover {
-  background: #e7a269;
+  background: #5bbebe;
 }
 
 .login-flash-message {
   text-align: center;
-  color: #e7a269;
+  color: #A6C8C8;
   margin-bottom: 2vh;
+}
+
+/* シェアー部分 */
+
+.shared-wrap {
+  width: 100vh;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  position: relative;  
+}
+
+.shared-icon {
+  width: 7vw;
+  position: absolute;
+  top: 18px;
+  left: 25px;
 }

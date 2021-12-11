@@ -1,0 +1,18 @@
+<div class="ask-detail">
+  <div class="ask-title">
+    <%= link_to blog.title, blog_path(blog.id), class: "title-link" %>
+  </div>
+  <div class="ask-category">
+    <%= blog.category.name %>
+  </div>
+  <%= image_tag blog.image.variant(resize: '250x250'), class: 'blog-image' if blog.image.attached? %>
+  <div class="ask-content">
+    <%= blog.content.truncate(30) %>
+  </div>
+  <div class="ask-user">
+    <%= blog.user.nickname %>
+  </div>
+  <div class="ask-date">
+    <%= l blog.created_at %>
+  </div>
+</div>
