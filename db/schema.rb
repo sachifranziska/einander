@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_06_105723) do
+ActiveRecord::Schema.define(version: 2021_12_13_090301) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -53,6 +53,16 @@ ActiveRecord::Schema.define(version: 2021_12_06_105723) do
     t.index ["user_id"], name: "index_questions_on_user_id"
   end
 
+  create_table "suggestions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "content", null: false
+    t.bigint "user_id", null: false
+    t.bigint "question_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["question_id"], name: "index_suggestions_on_question_id"
+    t.index ["user_id"], name: "index_suggestions_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "last_name", null: false
@@ -78,4 +88,6 @@ ActiveRecord::Schema.define(version: 2021_12_06_105723) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "blogs", "users"
   add_foreign_key "questions", "users"
+  add_foreign_key "suggestions", "questions"
+  add_foreign_key "suggestions", "users"
 end
