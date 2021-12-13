@@ -6,7 +6,7 @@
   <div class="select-post-contents">
     <ul class="post-lists">
       <li class="post-detail"><%= link_to image_tag("question_icon.png", size: '150x60', class:"question-icon"), new_question_path %></li>
-      <li class="post-detail"><%= link_to image_tag("advise_icon.png", size: '150x60', class:"advise-icon"), root_path %></li>
+      <li class="post-detail"><%= link_to image_tag("advise_icon.png", size: '150x60', class:"advise-icon"), url: "/questions/:question_id/suggestions" %></li>
       <li class="post-detail"><%= link_to image_tag("share_icon.png", size: '161x66', class:"share-icon"), new_blog_path %></li>
     </ul>
   </div>
