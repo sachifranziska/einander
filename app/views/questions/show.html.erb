@@ -24,3 +24,8 @@
     <%= link_to "アドバイスする", root_path, class:"question-btn"%>
   <% end %>
 <% end %>
+
+<%= form_with(model: [@question, @suggestion], local: true) do |form| %>
+  <%= form.text_area :text, placeholder: "アドバイスする", rows: "10" %>
+  <%= form.submit "SEND" %>
+<% end %>

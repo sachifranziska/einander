@@ -22,6 +22,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    @suggestion = Suggestion.new
   end
 
   def edit
