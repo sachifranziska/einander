@@ -1,11 +1,12 @@
 class SuggestionsController < ApplicationController
   def index
-    @questions = Question.includes(:user).order('created_at DESC') #確認
+    @questions = Question.includes(:user).order('created_at DESC')
   end
 
   def create
-    suggestion = Suggestion.create(suggestion_params)
-    redirect_to root_path
+    @question = Question.find(params[:id])
+    Suggestion.create(suggestion_params)
+    redirect_to question_path(@question.id)
   end
-  
+
 end

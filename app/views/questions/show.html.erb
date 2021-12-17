@@ -21,11 +21,9 @@
     <%= link_to "編集する", edit_question_path(@question.id), method: :get, class: "question-btn" %>
     <%= link_to "削除する", question_path(@question.id), method: :delete, class:"question-destroy" %>
   <% else %>
-    <%= link_to "アドバイスする", root_path, class:"question-btn"%>
+    <%= form_with(model: [@question, @suggestion], class:"question-btn", local: true) do |form| %>
+      <%= form.text_area :text, placeholder: "アドバイスする", rows: "10" %>
+      <%= form.submit "SEND" %>
+    <% end %>
   <% end %>
-<% end %>
-
-<%= form_with(model: [@question, @suggestion], local: true) do |form| %>
-  <%= form.text_area :text, placeholder: "アドバイスする", rows: "10" %>
-  <%= form.submit "SEND" %>
 <% end %>
