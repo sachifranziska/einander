@@ -27,3 +27,12 @@
     <% end %>
   <% end %>
 <% end %>
+<div class="suggestions-list">
+  <h4>＜アドバイスリスト＞</h4>
+  <% @suggestions.each do |suggestion| %>
+    <p>
+      <%= link_to suggestion.user.nickname %>
+      <%= suggestion.content %>
+    </p>
+  <% end %>
+</div>
