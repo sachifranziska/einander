@@ -4,8 +4,13 @@ class SuggestionsController < ApplicationController
   end
 
   def create
-    suggestion = Suggestion.create(suggestion_params)
-    redirect_to "/questions/#{suggestion.question.id}" 
+    @question = Question.find(params[:question_id])
+    @suggestion = @question.suggestions.new(suggestion_params)
+    @suggestion.save
+    redirect_to root_path
+
+    # suggestion = Suggestion.create(suggestion_params)
+    # redirect_to "/questions/#{suggestion.question.id}" 
   end
 
   private
