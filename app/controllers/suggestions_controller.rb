@@ -4,9 +4,13 @@ class SuggestionsController < ApplicationController
   end
 
   def create
-    @question = Question.find(params[:id])
-    Suggestion.create(suggestion_params)
-    redirect_to question_path(@question.id)
+    suggestion = Suggestion.create(suggestion_params)
+    redirect_to "/questions/#{suggestion.question.id}" 
+  end
+
+  private
+  def suggestion_params
+    params.require(:suggestion).permit(:content).merge(user_id: current_user.id, question_id: params[:question_id])
   end
 
 end
