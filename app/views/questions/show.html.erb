@@ -22,8 +22,8 @@
     <%= link_to "削除する", question_path(@question.id), method: :delete, class:"question-destroy" %>
   <% else %>
     <%= form_with(model: [@question, @suggestion], class:"question-btn", local: true) do |form| %>
-      <%= form.text_area :content, placeholder: "アドバイスする", rows: "10" %>
-      <%= form.submit "SEND" %>
+      <%= form.text_area :content, class:"form-text", placeholder: "アドバイスする" %>
+      <%= form.submit "SEND", class:"form-send-btn" %>
     <% end %>
   <% end %>
 <% end %>
