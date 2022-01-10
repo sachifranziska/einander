@@ -1,0 +1,33 @@
+.m-header {
+  height: 100px;
+  padding: 0 40px;
+  background-color: #A6C8C8;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header-contents {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.r-contents {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.small-icon {
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+
+.r-lists {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}

@@ -22,6 +22,8 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    @suggestion = Suggestion.new
+    @suggestions = @question.suggestions.includes(:user).order('created_at DESC')
   end
 
   def edit

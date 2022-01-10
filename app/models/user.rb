@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :questions
+  has_many :suggestions
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :country

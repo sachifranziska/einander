@@ -1,5 +1,6 @@
 class Question < ApplicationRecord
   belongs_to :user
+  has_many :suggestions
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
