@@ -1,3 +1,12 @@
+.ask-advise-list {
+  display: flex;
+}
+
+.suggestions-detail {
+  display: flex;
+  flex-direction: column;
+}
+
 .question-btn {
   display: flex;
   flex-direction: column;
