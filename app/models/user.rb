@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :questions
   has_many :suggestions
+  has_many :blogs
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :country
