@@ -30,6 +30,12 @@ RSpec.describe Question, type: :model do
         @question.valid?
         expect(@question.errors.full_messages).to include("Content can't be blank")
       end
+
+      it 'user_idが紐付いていなければ登録できない' do
+        @question.user = nil
+        @question.valid?
+        expect(@question.errors.full_messages).to include('User must exist')
+      end
     end
   end
 end

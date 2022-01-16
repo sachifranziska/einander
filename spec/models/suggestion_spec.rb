@@ -18,6 +18,18 @@ RSpec.describe Suggestion, type: :model do
         @suggestion.valid?
         expect(@suggestion.errors.full_messages).to include("Content can't be blank")
       end
+
+      it 'user_idが紐付いていなければ登録できない' do
+        @suggestion.user = nil
+        @suggestion.valid?
+        expect(@suggestion.errors.full_messages).to include('User must exist')
+      end
+
+      it 'question_idが紐付いていなければ登録できない' do
+        @suggestion.question = nil
+        @suggestion.valid?
+        expect(@suggestion.errors.full_messages).to include('Question must exist')
+      end
     end
   end
 end
