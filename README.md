@@ -54,6 +54,7 @@
 
 - has_many :questions
 - has_many :suggestions
+- has_many :blogs
 
 
 ## questions テーブル
