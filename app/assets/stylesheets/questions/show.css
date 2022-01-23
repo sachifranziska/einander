@@ -16,12 +16,15 @@
 .form-text {
   background: #fafafa;
   border: none;
-  border-bottom: 2px solid #e9e9e9;
   color: #666;
   font-size: 1em;
-  height: 100px;
+  height: 40px;
   transition: border-color 0.3s;
   width: 45vh;
+}
+
+.category-wrap {
+  border-bottom: 2px solid #e9e9e9;
 }
 
 .form-send-btn {
